@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default class NavBar extends React.Component {
   render() {
@@ -7,8 +8,8 @@ export default class NavBar extends React.Component {
       <Navbar bg="light" variant="light">
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Калкулатори</Nav.Link>
-          <Nav.Link href="#home">Потсетници</Nav.Link>
+          <Link to="/">Calculators</Link>
+          <Link to="/reminders">Reminders</Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
