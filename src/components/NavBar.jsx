@@ -8,8 +8,12 @@ export default class NavBar extends React.Component {
       <Navbar bg="light" variant="light">
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
-          <Link to="/">Calculators</Link>
-          <Link to="/reminders">Reminders</Link>
+          <Nav.Link>
+            <Link to="/">Calculators</Link>
+          </Nav.Link>
+          <Nav.Link>
+            <Link to="/reminders">Reminders</Link>
+          </Nav.Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
