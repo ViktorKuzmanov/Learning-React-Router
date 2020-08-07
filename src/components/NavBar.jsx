@@ -12,7 +12,7 @@ export default class NavBar extends React.Component {
             <Link to="/">Calculators</Link>
           </Nav.Link>
           <Nav.Link>
-            <Link to="/reminders">Reminders</Link>
+            <Link to="/about">About</Link>
           </Nav.Link>
         </Nav>
         <Form inline>
