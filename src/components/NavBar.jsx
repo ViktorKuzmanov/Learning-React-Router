@@ -1,9 +1,13 @@
 import React from "react";
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
-export default class NavBar extends React.Component {
+class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
   render() {
     return (
       <Navbar bg="light" variant="light" expand="md">
@@ -35,3 +39,5 @@ export default class NavBar extends React.Component {
     );
   }
 }
+
+export default withRouter(NavBar);
