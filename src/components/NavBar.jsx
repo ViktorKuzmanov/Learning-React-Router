@@ -23,7 +23,10 @@ class NavBar extends React.Component {
           title="Account"
           id="dropdown-menu-align-right"
         >
-          <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+          <Dropdown.Item eventKey="1">
+            <Button variant="light">Sign in</Button>{" "}
+            <Button variant="dark">Join</Button>{" "}
+          </Dropdown.Item>
           <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
           <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
           <Dropdown.Divider />
