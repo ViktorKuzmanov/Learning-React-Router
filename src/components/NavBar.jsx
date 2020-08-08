@@ -6,7 +6,7 @@ import { Dropdown, DropdownButton } from "react-bootstrap";
 export default class NavBar extends React.Component {
   render() {
     return (
-      <Navbar bg="light" variant="light">
+      <Navbar bg="light" variant="light" expand="md">
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link>
