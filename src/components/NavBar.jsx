@@ -9,12 +9,8 @@ class NavBar extends React.Component {
       <Navbar bg="light" variant="light" expand="md">
         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link>
-            <Link to="/">Calculators</Link>
-          </Nav.Link>
-          <Nav.Link>
-            <Link to="/about">About</Link>
-          </Nav.Link>
+          <Link to="/">Calculators</Link>
+          <Link to="/about">About</Link>
         </Nav>
         {this.props.location.pathname === "/" && (
           <Form inline>
