@@ -7,7 +7,7 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
     return (
       <Navbar bg="light" variant="light" expand="md">
@@ -20,10 +20,12 @@ class NavBar extends React.Component {
             <Link to="/about">About</Link>
           </Nav.Link>
         </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-primary">Search</Button>
-        </Form>
+        {this.props.location.pathname === "/" && (
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-primary">Search</Button>
+          </Form>
+        )}
         <DropdownButton
           alignRight
           title="Account"
