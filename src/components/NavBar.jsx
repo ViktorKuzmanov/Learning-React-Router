@@ -4,10 +4,6 @@ import { Link, withRouter } from "react-router-dom";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
 class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Navbar bg="light" variant="light" expand="md">
