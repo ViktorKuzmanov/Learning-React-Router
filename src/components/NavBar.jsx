@@ -8,19 +8,18 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activetab: "0",
+      activetab: "",
       showModal: false,
     };
     this.handleClick = this.handleClick.bind(this);
     this.onHide = this.onHide.bind(this);
   }
 
-  handleClick() {
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        showModal: true,
-      };
+  handleClick(event) {
+    const { name } = event.target;
+    this.setState({
+      showModal: true,
+      activetab: name,
     });
   }
 
@@ -57,10 +56,10 @@ class NavBar extends React.Component {
             title="Account"
             id="dropdown-menu-align-right"
           >
-            <Button variant="light" onClick={this.handleClick}>
+            <Button variant="light" name="singIn" onClick={this.handleClick}>
               Sign in
             </Button>{" "}
-            <Button variant="dark" onClick={this.handleClick}>
+            <Button variant="dark" name="register" onClick={this.handleClick}>
               Join
             </Button>{" "}
             <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
@@ -83,11 +82,14 @@ class NavBar extends React.Component {
           </Modal.Header>
           <Modal.Body>
             <h4>Studentko</h4>
-            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-              <Tab eventKey="home" title="Register">
+            <Tabs
+              defaultActiveKey={this.state.activetab}
+              id="uncontrolled-tab-example"
+            >
+              <Tab eventKey="register" title="Register">
                 RegisterButton
               </Tab>
-              <Tab eventKey="profile" title="Login">
+              <Tab eventKey="singIn" title="Sing in">
                 LoginButton
               </Tab>
             </Tabs>
